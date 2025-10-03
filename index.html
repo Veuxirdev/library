@@ -7,7 +7,69 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>hello world</h1>
+    <div class="register-book">
+        <form action="">
+            <div>
+                <label for="name">Book name:</label>
+                <input type="text" id="name" class="text-field" required>
+            </div>
+            <div>
+                <label for="author">Author name:</label>
+                <input type="text" id="author" class="text-field" required>
+            </div>
+            <div>
+                <label for="date">Select the publish year:</label>
+                <input type="number" id="publishYear" min="1" required>
+            </div>
+            <div>
+                <label for="genre">Select a book genre:</label>
+                <select id="genre" required>
+                    <option value="Fiction">Fiction</option>
+                    <option value="Nonfiction">Nonfiction</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+            <div>
+                <label for="numOfPages">Number of Pages:</label>
+                <input type="number" id="numOfPages" max="200000" required>
+            </div>
+            <div>
+                <label for="copiesSold">Quantity of Copies sold:</label>
+                <select id="copiesSold" required>
+                    <option value="Hundreds">Hundreds</option>
+                    <option value="Thousands">Thousands</option>
+                    <option value="Millions">Millions</option>
+                </select>
+            </div>
+            <div>
+                <label for="copiesSold">Have you read this book?</label>
+                <select id="read" required>
+                    <option value="true">Yes</option>
+                    <option value="false">No</option>
+                </select>
+            </div>
+            <button id="addBookBtn" type="submit">Add Book</button>
+        </form>
+    </div>
+    <div class="book-archive">
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Author</th>
+                    <th>Publish Date</th>
+                    <th>Genre</th>
+                    <th>Pages</th>
+                    <th>Copies Sold</th>
+                    <th>Read</th>
+                    <th colspan="2">Actions</th>
+                </tr>
+            </thead>
+            <tbody id="libraryTable">
+
+            </tbody>
+        </table>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>

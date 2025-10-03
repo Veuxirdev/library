@@ -3,3 +3,22 @@ body{
     background-color: black;
     color: white;
 }
+table{
+    border:1px solid white;
+    border-collapse: collapse;
+}
+
+th,td{
+    border: 1px solid white;
+}
+
+.icon{
+    width: 35px;
+}
+
+.red{
+    fill: red;
+}
+.green{
+    fill:green
+}
