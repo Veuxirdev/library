@@ -1,19 +1,114 @@
 body{
     margin: 0;
     background-color: black;
-    color: white;
+    color: white;  
+} 
+
+body,button{
+    font-family:'Courier New', Courier, monospace;
 }
+
+h1{
+    text-align: center  ;
+}
+
+.flex{
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+    margin: 24px;
+}
+
 table{
-    border:1px solid white;
-    border-collapse: collapse;
+    width: 100%;
+    border:1px solid gray;
+    border-radius: 5px;
+    border-collapse: separate;
+    text-align: center;
+    vertical-align: middle;
+}
+
+table button{
+    width: 100%;
+}
+
+th{
+    background-color: rgb(83, 81, 81);
+}
+
+td:nth-child(-n + 6){
+    background-color: rgb(53, 125, 134);
 }
 
 th,td{
-    border: 1px solid white;
+    border-style: none;
 }
 
 .icon{
     width: 35px;
+}
+
+#dialog{
+    width: 380px;
+    border-radius: 5px;
+    border-style: none;
+}
+
+#dialog::backdrop{
+    background-color: rgba(83, 81, 81, 0.7);
+    border-style: none;
+}
+
+.form-flex{
+    display: flex;
+    flex-direction: column;
+}
+
+.input-container{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-bottom: 10px;
+}
+
+input, select{
+    font-size: 18px;
+    padding: 5px;
+}
+
+#addBookBtn{
+    width: 100%;
+    font-size: 24px;
+    margin-top: 24px;
+}
+
+#addBookBtn:hover{
+    cursor: pointer;
+}
+
+#dialogCloser{
+    align-self: flex-end;
+    justify-content: center;
+    background-color: rgb(192 189 189);
+    padding: 4px;
+    border-radius: 10px;
+    width: 26px;
+}
+
+#dialogCloser:hover{
+    cursor: pointer;
+    background-color: rgb(140 140 213);
+}
+
+#dialogOpener{
+    fill: white;
+    background-color: rgb(83, 81, 81);
+    border-radius: 5px;
+}
+
+#dialogOpener:hover{
+    cursor: pointer;
+    fill: lightgreen;
 }
 
 .red{

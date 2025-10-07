@@ -6,11 +6,15 @@ const publishYearInput = document.getElementById('publishYear');
 publishYear.setAttribute('max', new Date().getFullYear().toString());
 const genreInput = document.getElementById('genre');
 const numOfPagesInput = document.getElementById('numOfPages');
-const copiesSold = document.getElementById('copiesSold');
+const copiesSoldInput = document.getElementById('copiesSold');
 const readInput = document.getElementById('read');
 const addBookBtn = document.getElementById('addBookBtn');
+const htmlForm = document.getElementById('form');
+const htmlDialog = document.getElementById('dialog');
+const dialogOpener = document.getElementById('dialogOpener');
+const dialogCloser = document.getElementById('dialogCloser');
 let myLibrary = [];
- 
+
 
 function Book(name, author, publishYear, genre, numOfPages, copiesSold, read) {
   this.id = crypto.randomUUID();
@@ -33,11 +37,11 @@ function Book(name, author, publishYear, genre, numOfPages, copiesSold, read) {
 function addBookToLibrary(name, author,publishYear, genre, numOfPages, copiesSold,read) {
   const bookObj = new Book(name,author,publishYear,genre,numOfPages,copiesSold,read);
   myLibrary.push(bookObj);
-  return 'done';
+  return bookObj;
 }
 
-addBookToLibrary('harry potter', 'J.K. Rowling', 1996, 'Fiction', 400, 'Millions', true);
-addBookToLibrary('b', 'd', 1996, 'Fiction', 400, 'Millions', false);
+addBookToLibrary("Harry Potter and the Philosopher's Stone", 'J. K. Rowling', 1997, 'Fiction', 223, 'Millions', true);
+addBookToLibrary('Foo', 'Mr.bar', 1996, 'Fiction', 400, 'Millions', false);
 
 function addBookToTable(object){
   if(!object){
@@ -59,7 +63,7 @@ function addBookToTable(object){
                     `;
 
   const readButton = document.createElement('button');
-  readButton.textContent = 'Read';
+  readButton.textContent = 'Toggle Read';
 
   readButton.addEventListener('click', () =>{
     const readTD = document.querySelector(`table tr[id="${object.id}"] > td.readTD`);
@@ -92,4 +96,31 @@ function addBookToTable(object){
 myLibrary.forEach(element => {
   addBookToTable(element);
 });
+
+addBookBtn.addEventListener('click',(e) => {
+  console.log(htmlForm.checkValidity())
+    if(!htmlForm.checkValidity()){
+        return
+      }
+  e.preventDefault()
+  const bookToAdd = addBookToLibrary(nameInput.value,
+                            authorInput.value,
+                            publishYearInput.value,
+                            genreInput.value,
+                            numOfPagesInput.value,
+                            copiesSoldInput.value,
+                            readInput.value);
+  htmlForm.reset();
+  addBookToTable(bookToAdd);
+  htmlDialog.close();
+})
+
+dialogOpener.addEventListener('click', (e) => {
+  htmlDialog.showModal();
+})
+
+dialogCloser.addEventListener('click', ()=>{
+  htmlDialog.close();
+  htmlForm.reset();
+})
 
