@@ -17,7 +17,7 @@
                 </div>
                 <div class="input-container">
                     <label for="author">Author name:</label>
-                    <input type="text" id="author" class="text-field" title="Please only use letters" pattern="\D" required>
+                    <input type="text" id="author" class="text-field" title="Please only use letters" pattern="[a-zA-Z]*" required>
                 </div>
                 <div class="input-container">
                     <label for="date">Publish year:</label>
@@ -56,22 +56,24 @@
     </dialog>
     <h1>Book Library</h1>
     <div class="flex">
-            <table class="book-archive">
-                <thead>
-                    <tr>
-                        <th>Name</th>
-                        <th>Author</th>
-                        <th>Publish Date</th>
-                        <th>Genre</th>
-                        <th>Pages</th>
-                        <th>Copies Sold</th>
-                        <th>Read</th>
-                        <th colspan="2">Actions</th>
-                    </tr>
-                </thead>
-                <tbody id="libraryTable">
-                </tbody>
-            </table>
+        <div class="table-container">
+                <table class="book-archive">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Author</th>
+                            <th>Publish Date</th>
+                            <th>Genre</th>
+                            <th>Pages</th>
+                            <th>Copies Sold</th>
+                            <th>Read</th>
+                            <th colspan="2">Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="libraryTable">
+                    </tbody>
+                </table>
+        </div>
         <div>
             <svg id="dialogOpener" class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>Add a new book</title><path d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z" /></svg>
         </div>

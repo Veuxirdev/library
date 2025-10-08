@@ -15,8 +15,12 @@ h1{
 .flex{
     display: flex;
     gap: 10px;
+    margin: 16px;
+}
+
+.table-container{
     overflow-x: auto;
-    margin: 24px;
+    flex: 1;
 }
 
 table{
