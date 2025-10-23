@@ -16,7 +16,7 @@ const dialogCloser = document.getElementById('dialogCloser');
 let myLibrary = [];
 
 
-function Book(name, author, publishYear, genre, numOfPages, copiesSold, read) {
+/*function Book(name, author, publishYear, genre, numOfPages, copiesSold, read) {
   this.id = crypto.randomUUID();
   this.name = name;
   this.author = author;
@@ -32,6 +32,22 @@ function Book(name, author, publishYear, genre, numOfPages, copiesSold, read) {
       this.read = true;
     }
   };
+}*/
+
+class Book{
+  constructor(name,author,publishYear,genre,numOfPages,copiesSold,read){
+    this.id = crypto.randomUUID();
+    this.name = name;
+    this.author = author;
+    this.publishYear = publishYear;
+    this.genre = genre;
+    this.numOfPages = numOfPages;
+    this.copiesSold = copiesSold;
+    this.read = read;
+  }
+  toggleRead(){
+    this.read = this.read? this.read = false: this.read = true;
+  }
 }
 
 function addBookToLibrary(name, author,publishYear, genre, numOfPages, copiesSold,read) {
