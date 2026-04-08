@@ -1,123 +1,130 @@
-body{
-    margin: 0;
-    background-color: black;
-    color: white;  
-} 
-
-body,button{
-    font-family:'Courier New', Courier, monospace;
+body {
+  margin: 0;
+  background-color: black;
+  color: white;
 }
 
-h1{
-    text-align: center  ;
+body,
+button {
+  font-family: "Courier New", Courier, monospace;
 }
 
-.flex{
-    display: flex;
-    gap: 10px;
-    margin: 16px;
+h1 {
+  text-align: center;
 }
 
-.table-container{
-    overflow-x: auto;
-    flex: 1;
+.flex {
+  display: flex;
+  gap: 10px;
+  margin: 16px;
 }
 
-table{
-    width: 100%;
-    border:1px solid gray;
-    border-radius: 5px;
-    border-collapse: separate;
-    text-align: center;
-    vertical-align: middle;
+.table-container {
+  overflow-x: auto;
+  flex: 1;
 }
 
-table button{
-    width: 100%;
+table {
+  width: 100%;
+  border: 1px solid gray;
+  border-radius: 5px;
+  border-collapse: separate;
+  text-align: center;
+  vertical-align: middle;
 }
 
-th{
-    background-color: rgb(83, 81, 81);
+table button {
+  width: 100%;
 }
 
-td:nth-child(-n + 6){
-    background-color: rgb(53, 125, 134);
+th {
+  background-color: rgb(83, 81, 81);
 }
 
-th,td{
-    border-style: none;
+td:nth-child(-n + 6) {
+  background-color: rgb(53, 125, 134);
 }
 
-.icon{
-    width: 35px;
+th,
+td {
+  border-style: none;
 }
 
-#dialog{
-    width: 380px;
-    border-radius: 5px;
-    border-style: none;
+.icon {
+  width: 35px;
 }
 
-#dialog::backdrop{
-    background-color: rgba(83, 81, 81, 0.7);
-    border-style: none;
+#dialog {
+  width: 380px;
+  border-radius: 5px;
+  border-style: none;
 }
 
-.form-flex{
-    display: flex;
-    flex-direction: column;
+#dialog::backdrop {
+  background-color: rgba(83, 81, 81, 0.7);
+  border-style: none;
 }
 
-.input-container{
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-    margin-bottom: 10px;
+.form-flex {
+  display: flex;
+  flex-direction: column;
 }
 
-input, select{
-    font-size: 18px;
-    padding: 5px;
+.input-container {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-bottom: 10px;
 }
 
-#addBookBtn{
-    width: 100%;
-    font-size: 24px;
-    margin-top: 24px;
+input,
+select {
+  font-size: 18px;
+  padding: 5px;
 }
 
-#addBookBtn:hover{
-    cursor: pointer;
+#addBookBtn {
+  width: 100%;
+  font-size: 24px;
+  margin-top: 24px;
 }
 
-#dialogCloser{
-    align-self: flex-end;
-    justify-content: center;
-    background-color: rgb(192 189 189);
-    padding: 4px;
-    border-radius: 10px;
-    width: 26px;
+#addBookBtn:hover {
+  cursor: pointer;
 }
 
-#dialogCloser:hover{
-    cursor: pointer;
-    background-color: rgb(140 140 213);
+#dialogCloser {
+  align-self: flex-end;
+  justify-content: center;
+  background-color: rgb(192 189 189);
+  padding: 4px;
+  border-radius: 10px;
+  width: 26px;
 }
 
-#dialogOpener{
-    fill: white;
-    background-color: rgb(83, 81, 81);
-    border-radius: 5px;
+#dialogCloser:hover {
+  cursor: pointer;
+  background-color: rgb(140 140 213);
 }
 
-#dialogOpener:hover{
-    cursor: pointer;
-    fill: lightgreen;
+#dialogOpener {
+  fill: white;
+  background-color: rgb(83, 81, 81);
+  border-radius: 5px;
 }
 
-.red{
-    fill: red;
+#dialogOpener:hover {
+  cursor: pointer;
+  fill: lightgreen;
 }
-.green{
-    fill:green
+
+.red {
+  fill: red;
+}
+.green {
+  fill: green;
+}
+
+input:invalid {
+  background-color: rgba(255, 0, 0, 0.5);
 }
